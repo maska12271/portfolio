@@ -1,0 +1,219 @@
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .aboutPage>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .aboutPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    min-height: calc(100vh - 130px);
+    padding: 0 20%;
+    margin-bottom: 30px;
+
+    .aboutMeText{
+      //text-transform: uppercase;
+      font-size: 56px;
+      animation: slideInFromBottom 1.5s ease 0.2s backwards;
+    }
+
+    .myDescriptionText{
+      font-size: 21px;
+      color: rgba(255, 255, 255, 0.6);
+      padding-top: 25px;
+      max-width: 700px;
+      margin-bottom: 70px;
+      text-align: center;
+      animation: slideInFromBottom 1.5s ease 0.4s backwards;
+    }
+
+    .skillsAndDescriptionDiv{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      gap: 60px;
+
+      .moreAboutMeFrame{
+        width: 60%;
+        animation: slideInFromBottom 1.5s ease 0.6s backwards;
+
+        .moreAboutMeTitle{
+          font-size: 35px;
+          margin-bottom: 30px;
+        }
+
+        .moreAboutMeBody{
+          gap: 25px;
+          display: flex;
+          flex-direction: column;
+
+          .firstText, .secondText, .thirdText{
+            font-size: 18px;
+            color: rgb(255 255 255 / 70%);
+            line-height: 1.7;
+
+            div{
+              display: contents;
+              font-weight: bold;
+              color: #fff;
+            }
+
+            a{
+              color: #a1fff9;
+            }
+          }
+        }
+      }
+
+      .mySkillsFrame{
+        width: 40%;
+        animation: slideInFromBottom 1.5s ease 0.9s backwards;
+
+        .mySkillsTitle{
+          font-size: 35px;
+          margin-bottom: 30px;
+        }
+
+        .mySkillsBody{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 20px;
+
+          .skill{
+            background: rgb(255 255 255 / 15%);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutPage>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .aboutPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: calc(100% - 85px);
+    color: #fff;
+    padding: 0 5%;
+    overflow: auto;
+
+    .aboutMeText{
+      font-size: 34px;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      animation: slideInFromBottom 1.5s ease 0.2s backwards;
+    }
+
+    .myDescriptionText{
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 30px;
+      animation: slideInFromBottom 1.5s ease 0.4s backwards;
+    }
+
+    .skillsAndDescriptionDiv{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      gap: 30px;
+      animation: slideInFromBottom 1.5s ease 0.6s backwards;
+
+      .moreAboutMeFrame{
+        width: 100%;
+
+        .moreAboutMeTitle{
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        .moreAboutMeBody{
+          gap: 15px;
+          display: flex;
+          flex-direction: column;
+
+          .firstText, .secondText, .thirdText{
+            font-size: 16px;
+            color: rgb(255 255 255 / 70%);
+            line-height: 1.7;
+
+            div{
+              display: contents;
+              font-weight: bold;
+              color: #fff;
+            }
+
+            a{
+              color: #a1fff9;
+            }
+          }
+        }
+      }
+
+      .mySkillsFrame{
+        width: 100%;
+
+        .mySkillsTitle{
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        .mySkillsBody{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 15px;
+
+          .skill{
+            background: rgb(255 255 255 / 15%);
+            padding: 14px;
+            border-radius: 5px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

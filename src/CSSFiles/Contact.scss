@@ -1,0 +1,233 @@
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .contactPage>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contactPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    color: #fff;
+    min-height: calc(100vh - 130px);
+    padding: 0 20%;
+    overflow: hidden;
+
+    .canIHelp:first-letter, .thankYou:first-letter{
+      text-transform: capitalize;
+    }
+
+    .thankYou{
+      font-size: 56px;
+      animation: slideInFromBottom 1.5s ease 0.2s backwards;
+    }
+
+    .canIHelp{
+      font-size: 21px;
+      color: rgba(255, 255, 255, 0.6);
+      padding-top: 25px;
+      max-width: 700px;
+      text-align: center;
+      animation: slideInFromBottom 1.5s ease 0.4s backwards;
+    }
+
+    .wrapper{
+      display:inline-flex;
+      margin-top: 80px;
+      animation: slideInFromBottom 1.5s ease 0.6s backwards;
+    }
+
+    .wrapper .icon{
+      margin: 0 35px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      position: relative;
+      z-index:2;
+    }
+
+    .wrapper .icon span{
+      position:relative;
+      z-index:2;
+      height: 60px;
+      width: 60px;
+      display:block;
+      background: #fff;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+      border-radius:50%;
+      text-align:center;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon span i{
+      font-size:30px;
+      line-height:60px;
+      color: #1a1a1a;
+    }
+
+    .wrapper .icon .tooltip{
+      position:absolute;
+      top: 0px;
+      background: #fff;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+      font-size: 20px;
+      padding: 10px 18px;
+      border-radius: 25px;
+      color:white;
+      opacity:0;
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon:hover .tooltip{
+      opacity: 1;
+      pointer-events: auto;
+      top: -65px;
+    }
+
+    .wrapper .icon .tooltip:before{
+      position:absolute;
+      content:"";
+      height:15px;
+      width:15px;
+      bottom:-8px;
+      left:50%;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .wrapper .icon:hover span,
+    .wrapp .icon:hover .tooltip{
+      text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    }
+    .wrapper .icon:hover span{
+      color: #000;
+    }
+    .wrapper .linkedin:hover span,
+    .wrapper .linkedin:hover .tooltip,
+    .wrapper .linkedin:hover .tooltip:before{
+      background:#a1fff9;
+      color: #000;
+    }
+    .wrapper .twitter:hover span,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip:before{
+      background:#a1fff9;
+      color: #000;
+    }
+    .wrapper .telegram:hover span,
+    .wrapper .telegram:hover .tooltip,
+    .wrapper .telegram:hover .tooltip:before{
+      background:#a1fff9;
+      color: #000;
+    }
+    .wrapper .instagram:hover span,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip:before{
+      background: #a1fff9;
+      color: #000;
+    }
+    .wrapper .mail:hover span,
+    .wrapper .mail:hover .tooltip,
+    .wrapper .mail:hover .tooltip:before{
+      background: #a1fff9;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contactPage>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contactPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: calc(100% - 85px);
+    color: #fff;
+    padding: 0 5%;
+    overflow: hidden;
+
+    .canIHelp:first-letter, .thankYou:first-letter{
+      text-transform: capitalize;
+    }
+
+    .thankYou{
+      font-size: 34px;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      animation: slideInFromBottom 1.5s ease 0.2s backwards;
+    }
+
+    .canIHelp{
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 30px;
+      text-align: center;
+      animation: slideInFromBottom 1.5s ease 0.4s backwards;
+    }
+
+    .wrapper{
+      display:inline-flex;
+      margin-top: 10px;
+      animation: slideInFromBottom 1.5s ease 0.6s backwards;
+    }
+
+    .wrapper .icon{
+      margin: 0 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+
+    .wrapper .icon span{
+      position: relative;
+      z-index: 2;
+      height: 40px;
+      width: 40px;
+      display: block;
+      background: #fff;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+      border-radius: 50%;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon span i{
+      font-size: 22px;
+      line-height: 40px;
+      color: #1a1a1a;
+    }
+  }
+}
