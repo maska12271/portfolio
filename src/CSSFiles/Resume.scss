@@ -35,8 +35,8 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      width: 780px;
-      margin-bottom: 20px;
+      width: 700px;
+      margin-bottom: 30px;
 
       .mainResumeText{
         font-size: 56px;
@@ -48,6 +48,7 @@
         font-size: 22px;
         color: rgba(255, 255, 255, 0.6);
         animation: slideInFromBottom 1.5s ease 0.4s backwards;
+        text-align: center;
       }
     }
 
@@ -58,73 +59,9 @@
       flex-direction: row;
       animation: slideInFromBottom 1.5s ease 0.6s backwards;
 
-      .previousResumePage{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 30px;
-        color: #fff;
-        border: 3px solid #a1fff9;
-        transition: 0.5s;
-        cursor: pointer;
-      }
-
-      .nextResumePage{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-left: 30px;
-        color: #fff;
-        border: 3px solid #a1fff9;
-        transition: 0.5s;
-        cursor: pointer;
-      }
-
-      .previousResumePage:hover, .nextResumePage:hover{
-        background: #a1fff9;
-        color: #000;
-      }
-
-      .disabledPreviousResumePage{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 30px;
-        color: #fff;
-        border: 3px solid #a1fff9;
-        opacity: 0.6;
-        cursor: pointer;
-      }
-
-      .disabledNextResumePage{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-left: 30px;
-        color: #fff;
-        border: 3px solid #a1fff9;
-        opacity: 0.6;
-        cursor: pointer;
-      }
-
-      .resumeArrow{
-        font-size: 30px;
-      }
-
       .resume{
         border-radius: 15px;
+        width: 700px;
       }
     }
 
@@ -158,11 +95,14 @@
     font-size: 34px;
     color: #fff;
     line-height: 1.2;
+    animation: slideInFromBottom 1.5s ease 0.2s backwards;
   }
 
   .notMainResumeText{
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    animation: slideInFromBottom 1.5s ease 0.4s backwards;
   }
 
   .resumeText{
@@ -174,25 +114,30 @@
   }
 
   .resume{
-    width: 70% !important;
+    width: 90% !important;
     height: auto !important;
     border-radius: 15px;
   }
 
   .resumePage{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    width: 90%;
+    height: calc(100% - 85px);
+    color: #fff;
+    padding: 0 5%;
+    overflow: auto;
   }
 
   .resumePage>div{
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-    animation: slideInFromBottom 1.2s ease-in-out;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .downloadResumeButton{
@@ -204,65 +149,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    animation: slideInFromBottomSmall 1.4s ease-in-out;
-  }
-
-  .previousResumePage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: #fff;
-    border: 3px solid #a1fff9;
-    transition: 1s;
-    cursor: pointer;
-  }
-
-  .nextResumePage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: #fff;
-    border: 3px solid #a1fff9;
-    transition: 1s;
-    cursor: pointer;
-  }
-
-  .disabledPreviousResumePage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: #fff;
-    border: 3px solid #a1fff9;
-    transition: 1s;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-
-  .disabledNextResumePage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: #fff;
-    border: 3px solid #a1fff9;
-    transition: 1s;
-    opacity: 0.6;
-    cursor: pointer;
-  }
-
-  .resumeArrow{
-    font-size: 20px;
+    animation: slideInFromBottom 1.5s ease 0.6s backwards;
   }
 
   .downloadResumeDiv{
@@ -276,6 +163,6 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    animation: slideInFromBottomBig 2s ease-in-out;
+    animation: slideInFromBottom 1.5s ease 0.8s backwards;
   }
 }

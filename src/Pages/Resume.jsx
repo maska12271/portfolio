@@ -21,7 +21,7 @@ function Resume() {
                 const fileURL = window.URL.createObjectURL(blob);
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'Mihhail Zolotarjov resume.pdf';
+                alink.download = 'Mihhail Zolotarjov - resume.pdf';
                 alink.click();
             })
         })
@@ -36,21 +36,7 @@ function Resume() {
                 </div>
                 <div className={"resumeOnPage"}>
                     {!pdfDocument && <span>Loading...</span>}
-                    {Boolean(pdfDocument && pdfDocument.numPages) && (
-                        <div className={(page === 1) ? "disabledPreviousResumePage" : "previousResumePage"} onClick={() => !(page === 1) && setPage(page - 1)}>
-                             <span className="material-symbols-outlined resumeArrow">
-                                chevron_left
-                            </span>
-                        </div>
-                    )}
                     <canvas ref={canvasRef} className={"resume"}/>
-                    {Boolean(pdfDocument && pdfDocument.numPages) && (
-                        <div className={(page === pdfDocument.numPages) ? "disabledNextResumePage" : "nextResumePage"} onClick={() => !(page === pdfDocument.numPages) && setPage(page + 1)}>
-                            <span className="material-symbols-outlined resumeArrow">
-                                chevron_right
-                            </span>
-                        </div>
-                    )}
                 </div>
                 <div onClick={downloadPDF} className={"downloadResumeDiv"}>
                     {t("resumePageDownload")}
