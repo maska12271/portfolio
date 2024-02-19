@@ -17,7 +17,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/portfolio/portfolio" element={<Header/>}>
+                <Route path="/portfolio" element={<Header/>}>
                     <Route index element={<Home />}/>
                     <Route path="/portfolio/projects" element={<Projects />}/>
                     <Route path="/portfolio/resume" element={<Resume />}/>
