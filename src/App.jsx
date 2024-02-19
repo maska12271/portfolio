@@ -15,7 +15,7 @@ import Contact from "./Pages/Contact.jsx";
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={"/portfolio"}>
             <Routes>
                 <Route path="/" element={<Header/>}>
                     <Route index element={<Home />}/>
