@@ -17,14 +17,14 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Header/>}>
+                <Route path="/portfolio/portfolio" element={<Header/>}>
                     <Route index element={<Home />}/>
-                    <Route path="/projects" element={<Projects />}/>
-                    <Route path="/resume" element={<Resume />}/>
-                    <Route path="/about" element={<About />}/>
-                    <Route path="/contact" element={<Contact />}/>
+                    <Route path="/portfolio/projects" element={<Projects />}/>
+                    <Route path="/portfolio/resume" element={<Resume />}/>
+                    <Route path="/portfolio/about" element={<About />}/>
+                    <Route path="/portfolio/contact" element={<Contact />}/>
                 </Route>
-                <Route path="*" element={<UnexcitingPage />}/>
+                <Route path="/portfolio/*" element={<UnexcitingPage />}/>
             </Routes>
         </BrowserRouter>
     );
