@@ -2,10 +2,15 @@ import {Link} from "react-router-dom";
 import '/src/CSSFiles/DesktopHeaderSettings.scss'
 import {useTranslation} from "react-i18next";
 import '/src/i18n.js'
+import {useEffect} from "react";
 
 function DesktopHeaderSettings() {
     const { t, i18n } = useTranslation();
     const languages = ["eng", "est", "rus"]
+
+    useEffect(() => {
+        console.log(i18n.language)
+    }, []);
 
     function changeLanguage(lng) {
         i18n.changeLanguage(lng);
