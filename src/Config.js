@@ -25,7 +25,7 @@ const config = {
             projectLink: "http://democc.build-game.com//"
         }
     ],
-    mySkills: ["React", "JavaScript", "Redux", "REST API", "GIT", "HTML", "CSS/SCSS", "Github", "Terminal", "Responsive Design"]
+    mySkills: ["React", "JavaScript", "Redux", "REST API", "GIT", "HTML", "CSS/SCSS", "Github", "Terminal", "Responsive Design", "Figma"]
 };
 
 export default config

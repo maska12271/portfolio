@@ -13,6 +13,7 @@ i18n
                 translations: {
                     "DesktopHeaderContact": "Contact",
                     "mySkillsReact": "React",
+                    "mySkillsFigma": "Figma",
                     "mySkillsJavaScript": "JavaScript",
                     "mySkillsHTML": "HTML",
                     "mySkillsCSS/SCSS": "CSS/SCSS",
@@ -73,6 +74,7 @@ i18n
                 translations: {
                     "DesktopHeaderContact": "Kontaktid",
                     "mySkillsReact": "React",
+                    "mySkillsFigma": "Figma",
                     "mySkillsJavaScript": "JavaScript",
                     "mySkillsHTML": "HTML",
                     "mySkillsCSS/SCSS": "CSS/SCSS",
@@ -133,6 +135,7 @@ i18n
                 translations: {
                     "DesktopHeaderContact": "Контакты",
                     "mySkillsReact": "React",
+                    "mySkillsFigma": "Figma",
                     "mySkillsJavaScript": "JavaScript",
                     "mySkillsHTML": "HTML",
                     "mySkillsCSS/SCSS": "CSS/SCSS",

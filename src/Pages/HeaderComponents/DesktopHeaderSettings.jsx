@@ -37,9 +37,6 @@ function DesktopHeaderSettings() {
                     }
                 })}
             </div>
-            {/*<span className="material-symbols-outlined darkLightSwitcher" onClick={toggleTheme}>*/}
-            {/*    brightness_medium*/}
-            {/*</span>*/}
         </div>
     );
 }

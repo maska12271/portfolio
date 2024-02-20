@@ -1,12 +1,10 @@
+import {useEffect} from "react";
+
 function UnexcitingPage() {
 
-    function redirectToHomePage() {
-        window.location.href = '/'
-    }
-
-    return (
-        <div>{redirectToHomePage()}</div>
-    )
+    useEffect(() => {
+        window.location.href = '/portfolio'
+    }, []);
 }
 
 export default UnexcitingPage
