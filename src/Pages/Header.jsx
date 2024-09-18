@@ -4,12 +4,31 @@ import DesktopLinks from '../Pages/HeaderComponents/DesktopLinks.jsx'
 import DesktopHeaderSettings from "./HeaderComponents/DesktopHeaderSettings.jsx";
 import MobileMenu from "./HeaderComponents/MobileMenu.jsx";
 import '/src/CSSFiles/Header.scss'
+import {useEffect, useState} from "react";
 
 function Header() {
+    const [desktop, setDesktop] = useState(true)
+
+    useEffect(() => {
+        if(window.innerWidth > config.maxSizeOfMobileVersion){
+            setDesktop(true)
+        }else{
+            setDesktop(false)
+        }
+    }, []);
+
+    window.addEventListener("resize", function() {
+        if(window.innerWidth > config.maxSizeOfMobileVersion){
+            setDesktop(true)
+        }else{
+            setDesktop(false)
+        }
+        return window.innerWidth;
+    });
 
     return (
         <div className={"mainPage"}>
-            {window.innerWidth > config.maxSizeOfMobileVersion ?
+            {desktop ?
                 <div className={"header"}>
                     <DesktopLinks/>
                     <DesktopHeaderSettings/>
