@@ -42,7 +42,7 @@ function Projects() {
                     <div className={"projectsTitle"}>{t("projectsPageProjects")}</div>
                     {config.projects.map((project) => {
                         return(
-                            <div className={"projectName"} onClick={() => handleProjectClick(project)}>{project.name}</div>
+                            <div className={project.name === openedProject.name ? "activeProjectName" : "projectName"} onClick={() => handleProjectClick(project)}>{project.name}</div>
                         );
                     })}
                 </div>

@@ -137,7 +137,15 @@
         margin-bottom: 10px;
       }
 
-      .projectName:hover{
+      .activeProjectName{
+        font-size: 20px;
+        color: rgb(255 255 255);
+        transition: all 500ms;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .projectName:hover, .activeProjectName:hover{
         color: #fff;
         filter: drop-shadow(0 0 8px #fff)
       }
@@ -258,7 +266,15 @@
 
       .projectName{
         font-size: 20px;
-        color: rgb(255 255 255 / 90%);
+        color: rgb(255 255 255 / 80%);
+        transition: all 500ms;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .activeProjectName{
+        font-size: 20px;
+        color: rgb(255 255 255);
         transition: all 500ms;
         cursor: pointer;
         margin-bottom: 10px;

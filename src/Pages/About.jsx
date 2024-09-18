@@ -1,10 +1,18 @@
 import '/src/CSSFiles/About.scss'
 import config from "../Config.js";
 import {useTranslation} from "react-i18next";
+import {useEffect} from "react";
 
 
 function About() {
     const { t, i18n } = useTranslation();
+
+    // useEffect(() => {
+    //     fetch('https://www.tlu.ee/masio/?id=ryhm&ryhm=IFIFB-1')
+    //         .then(response => response.json())
+    //         .then(data => console.log(data))
+    //         .catch(error => console.error(error));
+    // }, []);
 
     return(
         <div className={"aboutPage"}>
