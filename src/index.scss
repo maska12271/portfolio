@@ -4,7 +4,7 @@ body{
   width: 100vw;
   margin: 0;
   display: flex;
-  font-family: Arial;
+  font-family: 'JetBrains Mono', monospace;
   overflow-x: hidden;
   background: #020a13;
   //background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac885…/c157c/assets/svg/common-bg.svg);
@@ -16,4 +16,18 @@ body{
   width: 100vw;
   margin: 0;
   display: flex;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }

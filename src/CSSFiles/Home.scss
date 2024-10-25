@@ -3,9 +3,14 @@
   to   { opacity: 1; transform: translateY(0%);}
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @media screen and (min-width: 901px) {
   .homePage>div{
-    animation: fadeIn 1.5s ease 0.2s backwards;
+    //animation: fadeIn 1.5s ease 0.2s backwards;
   }
 
   .homePage{
@@ -25,23 +30,39 @@
     .welcome{
       color: #a1fff9;
       font-size: 25px;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .myName{
       text-transform: capitalize;
       font-size: 65px;
       line-height: 100px;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .homeSecondLine{
       font-size: 65px;
       color: rgba(255, 255, 255, 0.6);
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .someDescription{
       font-size: 21px;
       color: rgba(255, 255, 255, 0.6);
       padding-top: 25px;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .homeSecondLine:first-letter, .welcome:first-letter, .someDescription:first-letter{
@@ -79,7 +100,11 @@
       line-height: 1.1;
       font-weight: 400;
       margin: 0 0 20px;
-      animation: slideInFromBottom 1.5s ease 0.2s backwards;
+      //animation: slideInFromBottom 1.5s ease 0.2s backwards;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .myName{
@@ -87,7 +112,11 @@
       font-size: 34px;
       line-height: 1.1;
       font-weight: 600;
-      animation: slideInFromBottom 1.5s ease 0.4s backwards;
+      //animation: slideInFromBottom 1.5s ease 0.4s backwards;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .homeSecondLine{
@@ -95,14 +124,22 @@
       line-height: 0.9;
       font-size: 34px;
       color: rgba(255, 255, 255, 0.6);
-      animation: slideInFromBottom 1.5s ease 0.6s backwards;
+      //animation: slideInFromBottom 1.5s ease 0.6s backwards;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
 
     .someDescription{
       margin: 20px 0 0;
       font-size: 18px;
       color: rgba(255, 255, 255, 0.6);
-      animation: slideInFromBottom 1.5s ease 0.8s backwards;
+      //animation: slideInFromBottom 1.5s ease 0.8s backwards;
+
+      span {
+        animation: blink 1s step-end infinite;
+      }
     }
   }
 }
