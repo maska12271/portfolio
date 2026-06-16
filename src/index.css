@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Light theme */
+        --bg: 245 245 255;
+        --surface: 255 255 255;
+        --surface-2: 240 240 250;
+        --border: 226 226 240;
+        --accent: 82 73 224;
+        --accent-soft: 108 99 255;
+        --text: 10 10 26;
+        --muted: 92 92 122;
+    }
+
+    .dark {
+        /* Dark theme (default) */
+        --bg: 10 10 15;
+        --surface: 19 19 26;
+        --surface-2: 24 24 34;
+        --border: 30 30 46;
+        --accent: 124 116 255;
+        --accent-soft: 108 99 255;
+        --text: 240 240 255;
+        --muted: 136 136 170;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    body {
+        @apply bg-bg text-text font-sans;
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+        background-color: rgb(var(--accent) / 0.3);
+        color: rgb(var(--text));
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgb(var(--bg));
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(var(--border));
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(var(--accent) / 0.5);
+    }
+
+    :focus-visible {
+        outline: 2px solid rgb(var(--accent));
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+}
+
+@layer components {
+    .container-wide {
+        @apply mx-auto w-full max-w-content px-5 md:px-8 xl:px-10 3xl:max-w-wide;
+    }
+
+    .eyebrow {
+        @apply font-mono text-xs uppercase tracking-[0.25em] text-accent;
+    }
+
+    .chip {
+        @apply inline-flex items-center rounded-md border border-border bg-surface-2 px-2.5 py-1 font-mono text-xs text-muted transition-colors;
+    }
+
+    .link-underline {
+        @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+    .bg-grid {
+        background-image: linear-gradient(rgb(var(--border) / 0.4) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(var(--border) / 0.4) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 80%);
+    }
+}
