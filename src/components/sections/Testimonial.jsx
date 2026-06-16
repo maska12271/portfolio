@@ -22,7 +22,7 @@ export default function Testimonial() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5 }}
-                    className="relative max-w-3xl overflow-hidden rounded-2xl border border-border bg-surface p-8 md:p-12"
+                    className="relative overflow-hidden rounded-2xl border border-border bg-surface p-8 md:p-12"
                 >
                     <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-accent/10 blur-[100px]" />
 

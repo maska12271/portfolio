@@ -1,9 +1,11 @@
 // src/data/profile.js
-// Structured, mostly language-agnostic data. Translatable strings live in i18n.
+// strings live in i18n
 
 export const skills = {
     frontend: [
         "React",
+        "Next.js",
+        "React Router v7",
         "JavaScript",
         "TypeScript",
         "HTML",
@@ -11,13 +13,13 @@ export const skills = {
         "Tailwind CSS",
         "SCSS",
         "Redux",
-        "SSR / CSR",
+        "React SSR / CSR",
     ],
     backend: ["Java", "Spring Boot", "GoERP (SSR)", "Query", "REST API"],
     tools: ["Git", "Figma", "AI tools", "C#", "Python"],
 };
 
-// `roleKey` and `descKey` point at i18n strings.
+// keys point at i18n
 export const experience = [
     {
         id: "erply",
@@ -51,13 +53,13 @@ export const socials = {
     linkedin: "https://www.linkedin.com/in/mihhail-zolotarjov-94886a2a9",
 };
 
-// CV/résumé PDF. `file` lives in /public; `downloadName` is the saved filename.
+// CV in /public
 export const resume = {
     file: "cv.pdf",
     downloadName: "Mihhail Zolotarjov CV.pdf",
 };
 
-// Recommendation letter from Hours OÜ. `quoteKey`/`roleKey` point at i18n strings.
+// Hours OÜ recommendation
 export const testimonial = {
     quoteKey: "quote",
     author: "Mihkel Männamaa",

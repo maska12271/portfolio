@@ -7,7 +7,7 @@ function getInitialTheme() {
     if (typeof window === "undefined") return "dark";
     const stored = localStorage.getItem("theme");
     if (stored === "light" || stored === "dark") return stored;
-    // Follow system preference when nothing is stored.
+    // follow system if unset
     return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 }
 
@@ -23,7 +23,7 @@ export function ThemeProvider({ children }) {
         root.setAttribute("data-theme", theme);
     }, [theme]);
 
-    // Keep following the system until the user makes a manual choice.
+    // until manual choice
     useEffect(() => {
         if (hasManualPref) return;
         const mq = window.matchMedia("(prefers-color-scheme: light)");

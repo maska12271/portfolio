@@ -21,7 +21,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    // Scroll spy: highlight the section currently in view
+    // Scroll spy
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -47,7 +47,7 @@ export default function Navbar() {
         };
     }, [open]);
 
-    // Close mobile menu on Escape
+    // Close on Escape
     useEffect(() => {
         if (!open) return;
         const onKey = (e) => e.key === "Escape" && setOpen(false);
@@ -163,7 +163,7 @@ export default function Navbar() {
             </AnimatePresence>
         </motion.header>
 
-        {/* Mobile backdrop — tap to dismiss, blurs the page behind the menu */}
+        {/* Mobile backdrop */}
         <AnimatePresence>
             {open && (
                 <motion.div

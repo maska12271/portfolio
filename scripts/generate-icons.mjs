@@ -1,8 +1,4 @@
-// Generates raster icon fallbacks from public/favicon.svg
-//   - favicon.ico       (16/32/48 multi-size, for legacy browsers)
-//   - favicon-16/32.png (modern PNG fallbacks)
-//   - apple-touch-icon.png (180x180, full-bleed for iOS home screen)
-// Run with: npm run icons
+// Raster icons from favicon.svg — npm run icons
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
@@ -14,8 +10,7 @@ const pub = (f) => resolve(root, "public", f);
 
 const svg = await readFile(pub("favicon.svg"));
 
-// iOS masks the icon itself, so corners must be opaque (no transparency).
-// Full-bleed square version using the same dark gradient + accent monogram.
+// full-bleed (iOS masks corners)
 const appleSvg = Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
         <defs>

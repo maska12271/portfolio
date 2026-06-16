@@ -8,7 +8,7 @@ function getInitialLang() {
     if (typeof window === "undefined") return defaultLang;
     const stored = localStorage.getItem("lang");
     if (stored && translations[stored]) return stored;
-    // Match browser language if we support it (et / en / ru), else default.
+    // browser lang if supported, else default
     const browser = navigator.language?.slice(0, 2);
     if (browser && translations[browser]) return browser;
     return defaultLang;
@@ -27,7 +27,7 @@ export function LanguageProvider({ children }) {
         setLang(code);
     }, []);
 
-    // t("projects.title") -> nested lookup with graceful fallback.
+    // nested lookup, falls back to path
     const t = useCallback(
         (path) => {
             const keys = path.split(".");
