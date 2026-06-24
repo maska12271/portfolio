@@ -56,14 +56,24 @@ export default function Navbar() {
     }, [open]);
 
     const navTo = (id) => {
-        setOpen(false);
-        // The open mobile menu locks the page with `overflow: hidden` on <body>.
-        // The effect that clears that lock runs *after* this handler, so we
-        // release it synchronously right here — otherwise scrollIntoView fires
-        // against a still-locked body and is cancelled on mobile (desktop never
-        // locks the body, which is why it worked there but not on mobile).
-        document.body.style.overflow = "";
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        if (open) {
+            // MOBILE: a nav item was tapped while the menu is open. Scrolling in
+            // the same tick as the menu close gets dropped on mobile browsers —
+            // the state update, the body `overflow` lock release, and (on iOS)
+            // the scroll-position restore all land together and cancel the
+            // smooth scroll. (The Hero "See my work" button has no menu to
+            // close, so it always worked.) So: close the menu, release the
+            // lock, and scroll once the close has settled.
+            setOpen(false);
+            document.body.style.overflow = "";
+            window.setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 300);
+        } else {
+            // DESKTOP: nothing to close — scroll immediately.
+            el.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (
