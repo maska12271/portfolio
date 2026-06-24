@@ -85,5 +85,6 @@ export default {
         toggleTheme: "Vaheta teemat",
         switchLang: "Vaheta keelt",
         menu: "Menüü",
+        skip: "Liigu sisu juurde",
     },
 };

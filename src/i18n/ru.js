@@ -85,5 +85,6 @@ export default {
         toggleTheme: "Сменить тему",
         switchLang: "Сменить язык",
         menu: "Меню",
+        skip: "Перейти к содержимому",
     },
 };

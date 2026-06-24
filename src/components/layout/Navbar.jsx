@@ -57,6 +57,12 @@ export default function Navbar() {
 
     const navTo = (id) => {
         setOpen(false);
+        // The open mobile menu locks the page with `overflow: hidden` on <body>.
+        // The effect that clears that lock runs *after* this handler, so we
+        // release it synchronously right here — otherwise scrollIntoView fires
+        // against a still-locked body and is cancelled on mobile (desktop never
+        // locks the body, which is why it worked there but not on mobile).
+        document.body.style.overflow = "";
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
 
@@ -121,6 +127,7 @@ export default function Navbar() {
                         onClick={() => setOpen((o) => !o)}
                         aria-label={t("a11y.menu")}
                         aria-expanded={open}
+                        aria-controls="mobile-menu"
                         className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface text-text transition-colors hover:border-accent/50 md:hidden"
                     >
                         {open ? <X size={18} /> : <Menu size={18} />}
@@ -132,6 +139,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {open && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}

@@ -21,6 +21,10 @@ export function ThemeProvider({ children }) {
         const root = document.documentElement;
         root.classList.toggle("dark", theme === "dark");
         root.setAttribute("data-theme", theme);
+        // Keep the browser UI (mobile address bar) in sync with the active theme.
+        document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute("content", theme === "dark" ? "#0A0A0F" : "#F5F5FF");
     }, [theme]);
 
     // until manual choice

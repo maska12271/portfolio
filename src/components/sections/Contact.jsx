@@ -51,10 +51,10 @@ export default function Contact() {
                     <div className="mt-8 flex flex-wrap items-center gap-3">
                         <a
                             href={`mailto:${socials.email}`}
-                            className="group inline-flex items-center gap-2.5 font-display text-xl font-semibold text-text transition-colors hover:text-accent md:text-2xl"
+                            className="group flex min-w-0 max-w-full items-center gap-2.5 font-display text-lg font-semibold text-text transition-colors hover:text-accent sm:text-xl md:text-2xl"
                         >
-                            <Mail className="text-accent" size={24} />
-                            <span className="link-underline">{socials.email}</span>
+                            <Mail className="shrink-0 text-accent" size={24} />
+                            <span className="link-underline break-all">{socials.email}</span>
                         </a>
                         <button
                             onClick={copyEmail}
