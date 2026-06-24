@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#15151F" />
+            <stop offset="1" stop-color="#0A0A0F" />
+        </linearGradient>
+        <linearGradient id="ink" x1="16" y1="18" x2="48" y2="46" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#A39BFF" />
+            <stop offset="1" stop-color="#7C74FF" />
+        </linearGradient>
+    </defs>
+    <rect width="64" height="64" rx="14" fill="url(#bg)" />
+    <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#7C74FF" stroke-width="1.5" stroke-opacity="0.45" />
+    <text x="50%" y="50%" dy="0.04em" text-anchor="middle" dominant-baseline="central"
+        font-family="'Space Grotesk', system-ui, sans-serif" font-size="27" font-weight="700"
+        letter-spacing="-1" fill="url(#ink)">MZ</text>
+</svg>
