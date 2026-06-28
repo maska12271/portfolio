@@ -13,6 +13,14 @@
         --accent-soft: 108 99 255;
         --text: 10 10 26;
         --muted: 92 92 122;
+
+        /* Elevation scale — soft drop + hairline top highlight for depth */
+        --shadow-card: inset 0 1px 0 0 rgb(255 255 255 / 0.7),
+            0 1px 2px rgb(16 16 48 / 0.04), 0 8px 24px -12px rgb(16 16 48 / 0.14);
+        --shadow-card-hover: inset 0 1px 0 0 rgb(255 255 255 / 0.8),
+            0 2px 4px rgb(16 16 48 / 0.05), 0 18px 40px -14px rgb(var(--accent) / 0.28);
+        --shadow-elevated: inset 0 1px 0 0 rgb(255 255 255 / 0.7),
+            0 4px 8px -4px rgb(16 16 48 / 0.06), 0 24px 56px -20px rgb(16 16 48 / 0.18);
     }
 
     .dark {
@@ -25,6 +33,15 @@
         --accent-soft: 108 99 255;
         --text: 240 240 255;
         --muted: 136 136 170;
+
+        /* On dark surfaces shadows read as deeper black + a faint inner top edge */
+        --shadow-card: inset 0 1px 0 0 rgb(255 255 255 / 0.04),
+            0 1px 2px rgb(0 0 0 / 0.4), 0 12px 34px -16px rgb(0 0 0 / 0.7);
+        --shadow-card-hover: inset 0 1px 0 0 rgb(255 255 255 / 0.06),
+            0 2px 6px rgb(0 0 0 / 0.5), 0 22px 52px -18px rgb(0 0 0 / 0.8),
+            0 10px 32px -14px rgb(var(--accent) / 0.3);
+        --shadow-elevated: inset 0 1px 0 0 rgb(255 255 255 / 0.05),
+            0 4px 10px -4px rgb(0 0 0 / 0.45), 0 28px 64px -22px rgb(0 0 0 / 0.75);
     }
 
     * {

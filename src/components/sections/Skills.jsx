@@ -27,7 +27,7 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-60px" }}
                             transition={{ duration: 0.5, delay: gi * 0.1 }}
-                            className="rounded-2xl border border-border bg-surface p-6"
+                            className="rounded-2xl border border-border bg-surface p-6 shadow-card transition-[box-shadow,border-color] duration-300 hover:border-accent/30 hover:shadow-card-hover"
                         >
                             <div className="flex items-center gap-3">
                                 <span className="grid h-10 w-10 place-items-center rounded-lg bg-accent/10 text-accent">

@@ -84,7 +84,7 @@ export default function Navbar() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
                 scrolled
-                    ? "border-b border-border bg-bg/80 backdrop-blur-xl"
+                    ? "border-b border-border bg-bg/80 shadow-elevated backdrop-blur-xl"
                     : "border-b border-transparent bg-transparent"
             }`}
         >
@@ -95,7 +95,7 @@ export default function Navbar() {
                     className="group flex items-center gap-2"
                     aria-label="Top"
                 >
-                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface font-display text-sm font-bold text-accent transition-colors group-hover:border-accent/50">
+                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface font-display text-sm font-bold text-accent shadow-card transition-all group-hover:-translate-y-0.5 group-hover:border-accent/50 group-hover:shadow-card-hover">
                         MZ
                     </span>
                 </button>

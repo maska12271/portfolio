@@ -163,7 +163,7 @@ export default function Hero() {
                             whileHover={reduce ? {} : { y: -3, scale: 1.01 }}
                             whileTap={reduce ? {} : { scale: 0.98 }}
                             transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-accent/50 hover:text-accent"
+                            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-text shadow-card transition-[box-shadow,border-color,color] hover:border-accent/50 hover:text-accent hover:shadow-card-hover"
                         >
                             <Mail size={16} />
                             {t("hero.ctaContact")}
@@ -175,7 +175,7 @@ export default function Hero() {
                             whileHover={reduce ? {} : { y: -3, scale: 1.01 }}
                             whileTap={reduce ? {} : { scale: 0.98 }}
                             transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-accent/50 hover:text-accent"
+                            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-text shadow-card transition-[box-shadow,border-color,color] hover:border-accent/50 hover:text-accent hover:shadow-card-hover"
                         >
                             <Download size={16} />
                             {t("hero.ctaResume")}

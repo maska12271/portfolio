@@ -39,7 +39,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5 }}
-                    className="relative overflow-hidden rounded-2xl border border-border bg-surface p-8 md:p-12"
+                    className="relative overflow-hidden rounded-2xl border border-border bg-surface p-8 shadow-elevated md:p-12"
                 >
                     <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/10 blur-[100px]" />
 

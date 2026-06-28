@@ -49,6 +49,10 @@ export default {
             boxShadow: {
                 glow: "0 0 0 1px rgb(var(--accent) / 0.35), 0 8px 40px -12px rgb(var(--accent) / 0.4)",
                 "glow-soft": "0 0 60px -20px rgb(var(--accent) / 0.5)",
+                // Theme-aware elevation scale (defined in index.css)
+                card: "var(--shadow-card)",
+                "card-hover": "var(--shadow-card-hover)",
+                elevated: "var(--shadow-elevated)",
             },
             keyframes: {
                 blink: {

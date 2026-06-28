@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-colors duration-300 hover:border-accent/50 hover:shadow-glow md:p-7"
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 shadow-card transition-[box-shadow,border-color] duration-300 hover:border-accent/50 hover:shadow-card-hover md:p-7"
         >
             {/* Header row */}
             <div className="flex items-start justify-between gap-3">

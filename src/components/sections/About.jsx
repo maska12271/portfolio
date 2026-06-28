@@ -46,7 +46,7 @@ export default function About() {
                             {facts.map((f) => (
                                 <li
                                     key={f.label}
-                                    className="rounded-xl border border-border bg-surface p-4 transition-colors hover:border-accent/40"
+                                    className="rounded-xl border border-border bg-surface p-4 shadow-card transition-[box-shadow,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-card-hover"
                                 >
                                     <f.icon size={18} className="text-accent" />
                                     <p className="mt-3 text-xs text-muted">{f.label}</p>
