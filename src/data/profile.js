@@ -16,7 +16,7 @@ export const skills = {
         "React SSR / CSR",
     ],
     backend: ["Java", "Spring Boot", "GoERP (SSR)", "Query", "REST API"],
-    tools: ["Git", "Figma", "AI tools", "C#", "Python"],
+    tools: ["Git", "Figma", "AI tools", "Claude Code", "C#", "Python"],
 };
 
 // keys point at i18n

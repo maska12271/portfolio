@@ -46,6 +46,8 @@ const projects = [
             "Vite",
             "Tailwind CSS",
             "React Router",
+            "Claude Code",
+            "AI tools",
         ],
         github: {
             backend: "https://github.com/maska12271/tenderapp",
