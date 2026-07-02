@@ -50,8 +50,8 @@ const projects = [
             "AI tools",
         ],
         github: {
-            backend: "https://github.com/maska12271/tenderapp",
-            frontend: "https://github.com/maska12271/tender-frontend",
+            backend: "https://github.com/maska12271/kladdo-backend",
+            frontend: "https://github.com/maska12271/kladdo-frontend",
         },
         demo: "",
         current: true,
