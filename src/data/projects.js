@@ -26,7 +26,6 @@ const projects = [
         demo: "https://www.hours24.com/et",
         privateProject: true,
         company: "Erply",
-        current: true,
     },
     {
         id: "tender",
