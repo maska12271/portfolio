@@ -30,7 +30,7 @@ const projects = [
     },
     {
         id: "tender",
-        name: "TenderApp — Full-Stack Business Platform",
+        name: "Kladdo — Full-Stack Business Platform",
         tagline: "Ongoing full-stack project (backend + frontend)",
         description:
             "A full-stack business management system split across two repositories. The backend is a Spring Boot REST API built with Java 21, JWT authentication, role-based access control, and modules for companies, clients, products, orders, and tenders. The frontend is a React + Vite + Tailwind CSS admin dashboard for managing the same business workflows through a modern SPA interface.",
