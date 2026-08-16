@@ -29,7 +29,7 @@ const projects = [
     },
     {
         id: "tender",
-        name: "Kladdo — Full-Stack Business Platform",
+        name: "Skladdo — Full-Stack Business Platform",
         tagline: "Ongoing full-stack project (backend + frontend)",
         description:
             "A full-stack business management system split across two repositories. The backend is a Spring Boot REST API built with Java 21, JWT authentication, role-based access control, and modules for companies, clients, products, orders, and tenders. The frontend is a React + Vite + Tailwind CSS admin dashboard for managing the same business workflows through a modern SPA interface.",
@@ -49,8 +49,8 @@ const projects = [
             "AI tools",
         ],
         github: {
-            backend: "https://github.com/maska12271/kladdo-backend",
-            frontend: "https://github.com/maska12271/kladdo-frontend",
+            backend: "https://github.com/maska12271/skladdo-backend",
+            frontend: "https://github.com/maska12271/skladdo-frontend",
         },
         demo: "",
         current: true,
