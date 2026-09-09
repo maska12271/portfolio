@@ -39,7 +39,7 @@ const projects = [
             "Spring Security",
             "JWT",
             "JPA",
-            "H2",
+            "PostgreSQL",
             "REST API",
             "React",
             "Vite",
