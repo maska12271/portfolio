@@ -29,10 +29,10 @@ const projects = [
     },
     {
         id: "tender",
-        name: "Skladdo — Full-Stack Business Platform",
-        tagline: "Ongoing full-stack project (backend + frontend)",
+        name: "Skladdo",
+        tagline: "SaaS platform for wholesale & distribution businesses",
         description:
-            "A full-stack business management system split across two repositories. The backend is a Spring Boot REST API built with Java 21, JWT authentication, role-based access control, and modules for companies, clients, products, orders, and tenders. The frontend is a React + Vite + Tailwind CSS admin dashboard for managing the same business workflows through a modern SPA interface.",
+            "A live SaaS product for trading companies, bringing products, inventory, orders, invoices, tenders, and suppliers together in one system. Features include multi-warehouse inventory with lot and expiry tracking, sales and purchase orders with PDF invoicing, multi-part tender management, supplier outreach, free warehouse-partner accounts, and granular per-user permissions. Built with a Spring Boot REST API (Java 21, JWT auth, role-based access control) and a React + Vite + Tailwind CSS frontend.",
         stack: [
             "Java 21",
             "Spring Boot",
@@ -48,11 +48,8 @@ const projects = [
             "Claude Code",
             "AI tools",
         ],
-        github: {
-            backend: "https://github.com/maska12271/skladdo-backend",
-            frontend: "https://github.com/maska12271/skladdo-frontend",
-        },
-        demo: "",
+        github: "",
+        demo: "https://skladdo.eu",
         current: true,
     },
     {
